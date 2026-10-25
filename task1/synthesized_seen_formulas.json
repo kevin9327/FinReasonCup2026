@@ -1,0 +1,2526 @@
+{
+  "fp.accounting_and_financial_reporting.balance_sheets.balance_sheet_equation.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]-v[1])"
+  },
+  "fp.accounting_and_financial_reporting.balance_sheets.business_combination.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((v[1]*v[2])+v[0])"
+      ],
+      [
+        "trace_2",
+        "((1*v[3])+(1*v[4])+(1*v[5]))"
+      ],
+      [
+        "trace_3",
+        "((-1*v[6])+(-1*v[7])+(1*v[9]))"
+      ]
+    ],
+    "final": "(v[8]-v[10])"
+  },
+  "fp.accounting_and_financial_reporting.balance_sheets.cash_accounts_payable.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]-v[1])"
+  },
+  "fp.accounting_and_financial_reporting.balance_sheets.current_ratio_with_adjustment.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]/v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[1]+v[3])"
+      ],
+      [
+        "trace_3",
+        "(v[0]/v[5])"
+      ]
+    ],
+    "final": "(v[4]-v[6])"
+  },
+  "fp.accounting_and_financial_reporting.balance_sheets.inventory_turnover_days.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((1*v[0])+(1*v[1])+(-1*v[2]))"
+      ],
+      [
+        "trace_2",
+        "((v[0]+v[2])/2)"
+      ],
+      [
+        "trace_3",
+        "(v[6]/v[7])"
+      ]
+    ],
+    "final": "((1-v[3])*365/(-v[8]))"
+  },
+  "fp.accounting_and_financial_reporting.cash_flow_statements.acquisition_cash_flow_impact.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((1*v[1])+(1*v[2])+(1*v[3])+(1*v[4]))"
+      ],
+      [
+        "trace_2",
+        "((1*v[0])+(1*v[5])+(1*v[6]))"
+      ]
+    ],
+    "final": "(v[7]-v[8])"
+  },
+  "fp.accounting_and_financial_reporting.cash_flow_statements.closing_cash_balance.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "((1*v[0])+(1*v[1])+(1*v[2])+(1*v[3]))"
+  },
+  "fp.accounting_and_financial_reporting.cash_flow_statements.financing_activities.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[2]+v[3])"
+      ]
+    ],
+    "final": "(v[4]-v[5])"
+  },
+  "fp.accounting_and_financial_reporting.cash_flow_statements.indirect_cash_flow_operations.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[1]+v[2])"
+      ],
+      [
+        "trace_2",
+        "((-1*v[3])+(-1*v[4])+(-1*v[5])+(1*v[6]))"
+      ]
+    ],
+    "final": "((1*v[0])+(1*v[7])+(1*v[8]))"
+  },
+  "fp.accounting_and_financial_reporting.cash_flow_statements.tax_cash_outflow.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((-v[1])+v[2])"
+      ]
+    ],
+    "final": "(v[0]-v[3])"
+  },
+  "fp.accounting_and_financial_reporting.depreciation_and_amortization.asset_impairment_reversal.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((-v[0])+v[1])"
+      ],
+      [
+        "trace_2",
+        "v[3]"
+      ]
+    ],
+    "final": "min(v[2],v[3])"
+  },
+  "fp.accounting_and_financial_reporting.depreciation_and_amortization.impairment_with_value_in_use.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]-v[1])"
+      ],
+      [
+        "trace_2",
+        "max(v[2],v[3])"
+      ]
+    ],
+    "final": "max(Fraction(0),v[5]-v[6])"
+  },
+  "fp.accounting_and_financial_reporting.depreciation_and_amortization.straight_line_depreciation.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]-v[1])"
+      ]
+    ],
+    "final": "(v[3]/v[2])"
+  },
+  "fp.accounting_and_financial_reporting.income_statements.depreciation_ddb.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "ddb_rate_trace",
+        "(Fraction(2)/v[1])"
+      ],
+      [
+        "year1_book_value_trace",
+        "(v[0]*(1-v[9]))"
+      ],
+      [
+        "year2_depreciation_trace",
+        "(v[9]*v[10])"
+      ]
+    ],
+    "final": "(v[0]*((1-v[9])**2))"
+  },
+  "fp.accounting_and_financial_reporting.income_statements.dta_warranty_expense.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "temporary_difference_trace",
+        "(v[0]-v[1])"
+      ],
+      [
+        "tax_rate_ratio_trace",
+        "(v[2]/100)"
+      ]
+    ],
+    "final": "(v[2]*(v[3]/100))"
+  },
+  "fp.accounting_and_financial_reporting.income_statements.inventory_turnover.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "average_inventory_trace",
+        "((v[2]+v[3])/2)"
+      ],
+      [
+        "inventory_turnover_trace",
+        "(v[1]/v[5])"
+      ]
+    ],
+    "final": "(v[0]/v[6])"
+  },
+  "fp.accounting_and_financial_reporting.income_statements.operating_expenses_effect.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]-v[1])"
+  },
+  "fp.accounting_and_financial_reporting.income_statements.revenue_vs_cogs.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]-v[1])"
+  },
+  "fp.corporate_finance.capital_structure.debt_to_equity_after_asset_sale.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[2]-v[3])"
+      ],
+      [
+        "trace_2",
+        "max(Fraction(0),v[0]-v[4])"
+      ]
+    ],
+    "final": "(v[5]/v[1])"
+  },
+  "fp.corporate_finance.capital_structure.debt_to_equity_after_buyback.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[1]-v[2])"
+      ]
+    ],
+    "final": "(v[0]/v[3])"
+  },
+  "fp.corporate_finance.capital_structure.debt_to_equity_aggregate_debt.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ]
+    ],
+    "final": "(v[3]/v[2])"
+  },
+  "fp.corporate_finance.capital_structure.debt_to_equity_bond_and_buyback.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[2])"
+      ],
+      [
+        "trace_2",
+        "(v[1]-v[3])"
+      ]
+    ],
+    "final": "(v[4]/v[5])"
+  },
+  "fp.corporate_finance.capital_structure.debt_to_equity_bond_repay_buyback.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[2])"
+      ],
+      [
+        "trace_2",
+        "((-v[3])+v[5])"
+      ]
+    ],
+    "final": "(v[6]/(v[1]-v[4]))"
+  },
+  "fp.corporate_finance.div_policies.dividend_stable_growth_policy.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(1+v[1]/100)"
+      ],
+      [
+        "trace_2",
+        "(v[0]*(1+v[1]/100))"
+      ]
+    ],
+    "final": "(v[2]*v[4])"
+  },
+  "fp.corporate_finance.div_policies.dividend_stock_plus_growth.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]*(1+v[1]/100))"
+      ],
+      [
+        "trace_2",
+        "(v[2]*(1+v[3]/100))"
+      ]
+    ],
+    "final": "(v[4]*v[5])"
+  },
+  "fp.corporate_finance.div_policies.dividend_target_payout_policy.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]*(v[1]/100))"
+      ]
+    ],
+    "final": "(v[2]*v[3])"
+  },
+  "fp.corporate_finance.eps.eps_weighted_average.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[3]/12)"
+      ],
+      [
+        "trace_2",
+        "((v[2]*v[7])+v[1])"
+      ]
+    ],
+    "final": "(v[0]/v[8])"
+  },
+  "fp.crypto_finance.defi.liquidity_pool_reward.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "distributable_ratio_trace",
+        "(1-v[1]/100)"
+      ],
+      [
+        "distributable_fees_trace",
+        "(v[0]*(1-v[1]/100))"
+      ]
+    ],
+    "final": "(v[1]*(v[4]/100))"
+  },
+  "fp.crypto_finance.defi.multi_factor_portfolio.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "staking_impact_trace",
+        "((v[0]/100)*4)"
+      ],
+      [
+        "fee_impact_trace",
+        "(v[0]*(v[3]/100))"
+      ]
+    ],
+    "final": "(v[4]+v[5])"
+  },
+  "fp.crypto_finance.defi.staking_return.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "yield_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[1]/100))"
+  },
+  "fp.crypto_finance.defi.swap_fee.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "fee_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[1]/100))"
+  },
+  "fp.crypto_finance.defi.yield_farming_roi.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "annual_roi_ratio_trace",
+        "(v[1]/100)"
+      ],
+      [
+        "holding_fraction_trace",
+        "(v[2]/12)"
+      ]
+    ],
+    "final": "((v[0]*v[1])*(v[5]/100))"
+  },
+  "fp.crypto_finance.global_events_impact.crypto_price_drop.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "retention_ratio_trace",
+        "(1-v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(1-v[1]/100))"
+  },
+  "fp.crypto_finance.global_events_impact.crypto_volume_increase.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "volume_multiple_trace",
+        "(1+v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(1+v[1]/100))"
+  },
+  "fp.crypto_finance.global_events_impact.market_sentiment_shift.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "sentiment_ratio_trace",
+        "(v[1]/100)"
+      ],
+      [
+        "raw_market_cap_trace",
+        "(v[0]*(1+v[1]/100))"
+      ]
+    ],
+    "final": "max(v[2],v[4])"
+  },
+  "fp.crypto_finance.global_events_impact.regulatory_event.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "impact_ratio_trace",
+        "(v[1]/100)"
+      ],
+      [
+        "price_multiple_trace",
+        "(1+v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(1+v[1]/100))"
+  },
+  "fp.crypto_finance.regulations.compliance_fee_adjustment.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.crypto_finance.regulations.crypto_tax_penalty.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "penalty_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[1]/100))"
+  },
+  "fp.crypto_finance.regulations.multi_factor_regulatory_risk.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "total_factor_trace",
+        "(v[1]*(v[1]+1)/2)"
+      ],
+      [
+        "gross_cost_trace",
+        "(v[0]/(v[1]*(v[1]+1)/2))"
+      ],
+      [
+        "credited_cost_trace",
+        "((-v[4])+v[6])"
+      ]
+    ],
+    "final": "max((v[1]/10000),v[7])"
+  },
+  "fp.crypto_finance.regulations.regulatory_impact.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "increase_ratio_trace",
+        "(v[1]/100)"
+      ],
+      [
+        "percentage_increase_trace",
+        "(v[0]*(v[1]/100))"
+      ]
+    ],
+    "final": "max(Fraction(0),v[1]-(1-v[4]))"
+  },
+  "fp.crypto_finance.regulations.trade_cost_adjustment.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "increase_multiple_trace",
+        "((v[1]*12)/Fraction(252))"
+      ],
+      [
+        "calculated_cost_trace",
+        "(v[0]*v[3])"
+      ]
+    ],
+    "final": "max(v[2],v[4])"
+  },
+  "fp.crypto_finance.sentiments.news_impact.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "quality_sentiment_trace",
+        "(v[1]*v[2])"
+      ],
+      [
+        "influence_ratio_trace",
+        "(v[3]/100)"
+      ]
+    ],
+    "final": "((v[0]*12)*(((1+v[4]/Fraction(1200))**int(v[0]))-1))"
+  },
+  "fp.crypto_finance.sentiments.price_sentiment.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.crypto_finance.sentiments.tweet_influence.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "engagement_ratio_trace",
+        "(v[2]/100)"
+      ],
+      [
+        "polarity_total_trace",
+        "(v[0]*v[1])"
+      ]
+    ],
+    "final": "(v[0]*(v[4]/100))"
+  },
+  "fp.crypto_finance.sentiments.volume_sentiment.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.crypto_finance.tokenomics.emission_schedule_impact.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "emission_ratio_trace",
+        "(v[2]/100)"
+      ],
+      [
+        "new_supply_trace",
+        "(v[0]*(1+v[2]/100))"
+      ]
+    ],
+    "final": "(v[1]*v[4])"
+  },
+  "fp.crypto_finance.tokenomics.market_cap_calculation.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.crypto_finance.tokenomics.multi_factor_tokenomics.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "post_burn_supply_trace",
+        "(v[0]*(1-v[2]/100))"
+      ],
+      [
+        "adjusted_supply_trace",
+        "((1+v[2]/100)*v[5])"
+      ],
+      [
+        "adjusted_price_trace",
+        "(v[1]*(1+v[4]/100))"
+      ]
+    ],
+    "final": "(v[6]*v[7])"
+  },
+  "fp.crypto_finance.tokenomics.staking_reward_effect.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "effective_supply_trace",
+        "(v[0]*(1-v[2]/100))"
+      ],
+      [
+        "adjusted_price_trace",
+        "(v[1]*(1+v[2]/100))"
+      ]
+    ],
+    "final": "(v[4]*v[5])"
+  },
+  "fp.crypto_finance.tokenomics.token_price_calculation.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(Fraction(2)/v[0])"
+  },
+  "fp.crypto_finance.transaction_analysis.bulk_transaction_fees.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "net_one_trace",
+        "(v[0]*(1-v[3]/100))"
+      ],
+      [
+        "net_two_trace",
+        "v[6]"
+      ],
+      [
+        "net_three_trace",
+        "v[6]"
+      ]
+    ],
+    "final": "(v[6]*3)"
+  },
+  "fp.crypto_finance.transaction_analysis.cross_chain_transfer.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "retained_ratio_trace",
+        "(1-v[1]/100)"
+      ],
+      [
+        "after_fee_trace",
+        "(v[0]*(1-v[1]/100))"
+      ]
+    ],
+    "final": "(v[2]+v[4])"
+  },
+  "fp.crypto_finance.transaction_analysis.fixed_fee_transaction.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]-v[1])"
+  },
+  "fp.crypto_finance.transaction_analysis.multi_factor_transaction.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "network_one_net_trace",
+        "((v[0]*(v[1]/100))*(1-v[1]/100))"
+      ],
+      [
+        "network_two_after_fixed_trace",
+        "((v[0]*(1-v[1]/100))-v[7])"
+      ],
+      [
+        "network_two_net_trace",
+        "((1+v[7]/100)*v[12])"
+      ]
+    ],
+    "final": "(v[11]+v[13])"
+  },
+  "fp.crypto_finance.transaction_analysis.transaction_fee_calculation.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "retained_ratio_trace",
+        "(1-v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(1-v[1]/100))"
+  },
+  "fp.crypto_finance.whale_detection.cross_exchange_impact.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "post_fee_trace",
+        "(v[0]*(1-v[1]/100))"
+      ],
+      [
+        "effective_amount_trace",
+        "((1-v[2]/100)*v[4])"
+      ],
+      [
+        "raw_excess_trace",
+        "((-v[3])+v[5])"
+      ]
+    ],
+    "final": "max((v[1]/10000),v[6])"
+  },
+  "fp.crypto_finance.whale_detection.large_transfer_detection.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "raw_excess_trace",
+        "(v[0]-v[1])"
+      ]
+    ],
+    "final": "max(Fraction(0),v[0]-v[1])"
+  },
+  "fp.crypto_finance.whale_detection.multiple_transaction_analysis.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "excess_one_trace",
+        "max(Fraction(0),v[0]-v[3])"
+      ],
+      [
+        "excess_two_trace",
+        "max(Fraction(0),v[1]-v[3])"
+      ],
+      [
+        "excess_three_trace",
+        "max(Fraction(0),v[2]-v[3])"
+      ]
+    ],
+    "final": "((1*v[4])+(1*v[5])+(1*v[6]))"
+  },
+  "fp.crypto_finance.whale_detection.threshold_adjustment_detection.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "adjusted_threshold_trace",
+        "(v[1]*(1+v[2]/100))"
+      ],
+      [
+        "raw_excess_trace",
+        "(v[0]-v[3])"
+      ]
+    ],
+    "final": "max(Fraction(0),v[0]-v[3])"
+  },
+  "fp.crypto_finance.whale_detection.wallet_activity_detection.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]/v[1])"
+  },
+  "fp.finance_regulation.basel.capital_buffer.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "total_required_percent",
+        "(v[1]+v[2])"
+      ]
+    ],
+    "final": "(v[0]*(v[3]/100))"
+  },
+  "fp.finance_regulation.basel.tier1_composition.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "eligible_tier1_usd_million",
+        "(v[0]+v[2])"
+      ],
+      [
+        "composition_ratio",
+        "(v[6]/v[4])"
+      ]
+    ],
+    "final": "(v[7]*100)"
+  },
+  "fp.finance_regulation.compliance.delayed_fine.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "delay_penalty_usd",
+        "(v[1]*v[2])"
+      ]
+    ],
+    "final": "(v[0]+v[3])"
+  },
+  "fp.finance_regulation.compliance.fine_calculation.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.finance_regulation.compliance.regional_weighted_score.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "region_a_component",
+        "(v[0]*v[2])"
+      ],
+      [
+        "region_b_component",
+        "(v[1]*v[3])"
+      ]
+    ],
+    "final": "(v[4]+v[5])"
+  },
+  "fp.finance_regulation.compliance.risk_score.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.finance_regulation.security.trading_gain.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "gain_per_share",
+        "((-v[1])+v[2])"
+      ]
+    ],
+    "final": "(v[0]*v[3])"
+  },
+  "fp.financial_markets.bond_pricing.dirty_price_with_simple_accrual.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "annual_coupon_trace",
+        "(v[1]*(v[2]/100))"
+      ],
+      [
+        "coupon_per_period_trace",
+        "(v[7]/v[3])"
+      ],
+      [
+        "accrued_interest_trace",
+        "((v[4]*v[8])/v[5])"
+      ]
+    ],
+    "final": "(v[0]+v[9])"
+  },
+  "fp.financial_markets.bond_pricing.one_year_coupon_bond_price.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "annual_coupon_trace",
+        "(v[0]*(v[1]/100))"
+      ],
+      [
+        "maturity_cash_flow_trace",
+        "(v[0]*(1+v[1]/100))"
+      ]
+    ],
+    "final": "(v[6]/(1+v[2]/100))"
+  },
+  "fp.financial_markets.bond_pricing.two_year_par_bond_ytm.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "annual_coupon_trace",
+        "(v[0]*(v[1]/100))"
+      ],
+      [
+        "ytm_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "v[1]"
+  },
+  "fp.financial_markets.bond_pricing.zero_coupon_bond_price.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "discount_denominator_trace",
+        "((1+v[2]/Fraction(100))**int(v[1]))"
+      ]
+    ],
+    "final": "(v[0]/v[5])"
+  },
+  "fp.financial_markets.forex_trading.eur_to_gbp_cross_conversion.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "cross_rate_trace",
+        "((1-v[0])+(1+v[0]))"
+      ]
+    ],
+    "final": "(v[0]*2)"
+  },
+  "fp.financial_markets.forex_trading.foreign_to_usd_conversion.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.financial_markets.forex_trading.long_position_profit_loss.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "quote_change_trace",
+        "((-v[1])+v[2])"
+      ],
+      [
+        "pip_difference_trace",
+        "(v[4]*10000)"
+      ],
+      [
+        "pip_value_trace",
+        "(v[0]/10000)"
+      ]
+    ],
+    "final": "(v[0]*v[4])"
+  },
+  "fp.financial_markets.forex_trading.triangular_arbitrage_profit.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "foreign_a_trace",
+        "(v[0]*v[1])"
+      ],
+      [
+        "foreign_b_trace",
+        "(v[2]*v[4])"
+      ],
+      [
+        "ending_usd_trace",
+        "(v[3]*v[5])"
+      ]
+    ],
+    "final": "((-v[0])+v[6])"
+  },
+  "fp.financial_markets.forex_trading.usd_quote_pip_value.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.financial_markets.option_pricing.call_intrinsic_value.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "moneyness_trace",
+        "(v[0]-v[1])"
+      ]
+    ],
+    "final": "max(Fraction(0),v[0]-v[1])"
+  },
+  "fp.financial_markets.option_pricing.factorized_call_value.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "weighted_spot_trace",
+        "(v[0]*v[3])"
+      ],
+      [
+        "discounted_strike_trace",
+        "(v[1]*v[6])"
+      ],
+      [
+        "weighted_strike_trace",
+        "(v[5]*v[10])"
+      ]
+    ],
+    "final": "(v[9]-v[11])"
+  },
+  "fp.financial_markets.option_pricing.long_call_roi.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "call_payoff_trace",
+        "max(Fraction(0),(-v[1])-(-v[2]))"
+      ],
+      [
+        "net_profit_loss_trace",
+        "((-v[0])+v[5])"
+      ]
+    ],
+    "final": "((v[5]-v[0])*100/v[0])"
+  },
+  "fp.financial_markets.option_pricing.put_intrinsic_value.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "moneyness_trace",
+        "((-v[0])+v[1])"
+      ]
+    ],
+    "final": "max(Fraction(0),(-v[0])-(-v[1]))"
+  },
+  "fp.financial_markets.stock_market_analysis.dividend_yield.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "yield_ratio_trace",
+        "(v[0]/v[1])"
+      ]
+    ],
+    "final": "(v[3]*100)"
+  },
+  "fp.financial_markets.stock_market_analysis.share_price_from_pe.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "earnings_per_share_trace",
+        "(v[1]/v[2])"
+      ]
+    ],
+    "final": "(v[0]*v[3])"
+  },
+  "fp.financial_markets.stock_market_analysis.simple_capital_gain.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "purchase_cost_trace",
+        "(v[0]*v[1])"
+      ],
+      [
+        "sale_proceeds_trace",
+        "(v[0]*v[2])"
+      ]
+    ],
+    "final": "((-v[3])+v[4])"
+  },
+  "fp.financial_markets.stock_market_analysis.stock_total_dollar_return.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "purchase_cost_trace",
+        "(v[0]*v[1])"
+      ],
+      [
+        "total_dividends_trace",
+        "(v[0]*v[2])"
+      ],
+      [
+        "sale_proceeds_trace",
+        "(v[0]*v[3])"
+      ]
+    ],
+    "final": "((-1*v[4])+(1*v[5])+(1*v[6]))"
+  },
+  "fp.financial_ratios.effratio.asset_turnover_average_assets.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((v[1]+v[2])/2)"
+      ]
+    ],
+    "final": "(v[0]/v[3])"
+  },
+  "fp.financial_ratios.effratio.asset_turnover_compare_periods.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((v[0]+(1-v[0]))/2)"
+      ],
+      [
+        "trace_2",
+        "(v[0]/(v[1]+v[2]))"
+      ]
+    ],
+    "final": "(v[3]-v[4])"
+  },
+  "fp.financial_ratios.effratio.asset_turnover_simple.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]/v[1])"
+  },
+  "fp.financial_ratios.effratio.asset_turnover_with_depreciation.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]/v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[1]-v[2])"
+      ],
+      [
+        "trace_3",
+        "(v[0]/v[4])"
+      ]
+    ],
+    "final": "((-v[3])+v[5])"
+  },
+  "fp.financial_ratios.levratio.capital_injection.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[1]+v[2])"
+      ]
+    ],
+    "final": "(v[0]/v[3])"
+  },
+  "fp.financial_ratios.levratio.convertible_debt.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]-v[2])"
+      ],
+      [
+        "trace_2",
+        "(v[1]+v[2])"
+      ]
+    ],
+    "final": "(v[3]/v[4])"
+  },
+  "fp.financial_ratios.levratio.debt_repayment_and_borrowing.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]-v[2])"
+      ],
+      [
+        "trace_2",
+        "(v[3]+v[4])"
+      ]
+    ],
+    "final": "(v[5]/v[1])"
+  },
+  "fp.financial_ratios.levratio.debt_to_equity_simple.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]/v[1])"
+  },
+  "fp.financial_ratios.levratio.debt_vs_equity_scenarios.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((v[0]+v[2])/v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[0]/(v[1]+v[3]))"
+      ]
+    ],
+    "final": "(v[4]-v[5])"
+  },
+  "fp.financial_ratios.liqratio.both_ratios.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]/v[3])"
+      ],
+      [
+        "trace_2",
+        "((1*v[0])+(-1*v[1])+(-1*v[2]))"
+      ]
+    ],
+    "final": "(v[5]/v[3])"
+  },
+  "fp.financial_ratios.liqratio.current_ratio_simple.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]/v[1])"
+  },
+  "fp.financial_ratios.liqratio.quick_ratio_simple.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]-v[1])"
+      ]
+    ],
+    "final": "(v[3]/v[2])"
+  },
+  "fp.financial_ratios.liqratio.quick_ratio_target.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((v[0]+v[3])/2)"
+      ],
+      [
+        "trace_2",
+        "(v[3]*v[4])"
+      ]
+    ],
+    "final": "max(Fraction(0),(-v[5])-(-v[6]))"
+  },
+  "fp.financial_ratios.profitratio.gross_profit_margin.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]-v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[2]/v[0])"
+      ]
+    ],
+    "final": "(v[3]*100)"
+  },
+  "fp.financial_ratios.profitratio.net_profit_margin.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[1]/v[0])"
+      ]
+    ],
+    "final": "(v[2]*100)"
+  },
+  "fp.financial_ratios.profitratio.operating_margin.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]-v[1])"
+      ],
+      [
+        "trace_2",
+        "((-v[2])+v[3])"
+      ]
+    ],
+    "final": "(v[4]*100/v[0])"
+  },
+  "fp.financial_ratios.profitratio.target_net_margin.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[1]*100/v[0])"
+      ],
+      [
+        "trace_2",
+        "(v[0]*(v[2]/100))"
+      ]
+    ],
+    "final": "max(Fraction(0),(-v[1])-(-v[4]))"
+  },
+  "fp.fintech.digital_banking.extra_payment_payoff.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "scheduled_paid_trace",
+        "(v[2]*100)"
+      ],
+      [
+        "balance_before_trace",
+        "max(Fraction(0),v[0]-(v[2]*100))"
+      ],
+      [
+        "balance_after_trace",
+        "max(Fraction(0),(-v[3])-(-v[5]))"
+      ]
+    ],
+    "final": "(v[6]/100)"
+  },
+  "fp.fintech.digital_banking.highest_spend_amount.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "max_a_b_trace",
+        "max(v[0],v[1])"
+      ]
+    ],
+    "final": "max(v[2],v[3])"
+  },
+  "fp.fintech.digital_banking.monthly_deposit_future_value.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "monthly_rate_trace",
+        "(v[2]/100)"
+      ],
+      [
+        "growth_power_trace",
+        "((1+v[2]/Fraction(100))**int(v[1]))"
+      ],
+      [
+        "annuity_factor_trace",
+        "((1-v[6])*100/(-v[2]))"
+      ]
+    ],
+    "final": "(v[0]*v[7])"
+  },
+  "fp.fintech.digital_banking.simple_interest_balance.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "simple_interest_trace",
+        "((v[0]*v[1])*(v[2]/100))"
+      ]
+    ],
+    "final": "(v[0]+v[3])"
+  },
+  "fp.fintech.digital_banking.transfer_total_deduction.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "fee_amount_trace",
+        "(v[0]*(v[1]/100))"
+      ]
+    ],
+    "final": "(v[0]*(1+v[1]/100))"
+  },
+  "fp.fintech.payment_technologies.batch_effective_fee.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "fixed_fee_total_trace",
+        "(v[1]*v[2])"
+      ],
+      [
+        "variable_fee_total_trace",
+        "(v[0]*(v[2]/100))"
+      ],
+      [
+        "total_fees_trace",
+        "(v[4]+v[5])"
+      ]
+    ],
+    "final": "(v[6]*100/v[0])"
+  },
+  "fp.fintech.payment_technologies.bnpl_installment.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "fee_ratio_trace",
+        "(v[1]/100)"
+      ],
+      [
+        "total_due_trace",
+        "(v[0]*(1+v[1]/100))"
+      ]
+    ],
+    "final": "(v[4]/v[2])"
+  },
+  "fp.fintech.payment_technologies.card_processing_net.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "merchant_keep_trace",
+        "(1-v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(1-v[1]/100))"
+  },
+  "fp.fintech.payment_technologies.cross_border_net.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "platform_multiple_trace",
+        "(v[1]*(1-v[2]/100))"
+      ],
+      [
+        "before_fee_trace",
+        "(v[0]*v[4])"
+      ]
+    ],
+    "final": "((-v[2])+v[5])"
+  },
+  "fp.fintech.robo_advisors.equity_rebalance_trade.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "total_value_trace",
+        "(v[0]+v[1])"
+      ],
+      [
+        "target_equity_trace",
+        "(v[2]*(v[3]/100))"
+      ]
+    ],
+    "final": "((-v[0])+v[4])"
+  },
+  "fp.fintech.robo_advisors.monthly_contribution_projection.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "growth_power_trace",
+        "((1+v[2]/Fraction(100))**int(v[1]))"
+      ],
+      [
+        "annuity_factor_trace",
+        "((1-v[6])*100/(-v[2]))"
+      ],
+      [
+        "before_fee_trace",
+        "(v[0]*v[7])"
+      ]
+    ],
+    "final": "((1-v[3]/100)*v[8])"
+  },
+  "fp.fintech.robo_advisors.net_portfolio_after_fee.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "keep_ratio_trace",
+        "(1-v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(1-v[1]/100))"
+  },
+  "fp.fintech.robo_advisors.one_year_after_fee.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "growth_multiple_trace",
+        "(1+v[1]/100)"
+      ],
+      [
+        "before_fee_trace",
+        "(v[0]*(1+v[1]/100))"
+      ]
+    ],
+    "final": "((1-v[2]/100)*v[4])"
+  },
+  "fp.fintech.robo_advisors.tax_loss_savings.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "loss_per_share_trace",
+        "max(Fraction(0),v[1]-v[2])"
+      ],
+      [
+        "eligible_loss_trace",
+        "(v[0]*v[4])"
+      ],
+      [
+        "tax_ratio_trace",
+        "(v[3]/100)"
+      ]
+    ],
+    "final": "(v[3]*(v[5]/100))"
+  },
+  "fp.investment_analysis.ci.interest_from_known_total.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "growth_multiplier_trace",
+        "((1+v[2]/Fraction(100))**int(v[1]))"
+      ],
+      [
+        "implied_principal_trace",
+        "(v[0]/v[5])"
+      ]
+    ],
+    "final": "(v[0]-v[6])"
+  },
+  "fp.investment_analysis.ci.simple_annual_compound_interest.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "ending_balance_trace",
+        "(v[0]*((1+v[1]/Fraction(100))**int(v[2])))"
+      ],
+      [
+        "growth_multiplier_trace",
+        "((1+v[1]/Fraction(100))**int(v[2]))"
+      ]
+    ],
+    "final": "(v[0]*(((1+v[1]/Fraction(100))**int(v[2]))-1))"
+  },
+  "fp.investment_analysis.ci.two_phase_semiannual_interest.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "first_growth_trace",
+        "(((1+v[2]/Fraction(200))**int(v[1]))*((1+v[2]/Fraction(200))**int(v[1])))"
+      ],
+      [
+        "second_growth_trace",
+        "(((1+v[4]/Fraction(200))**int(v[3]))*((1+v[4]/Fraction(200))**int(v[3])))"
+      ],
+      [
+        "ending_balance_trace",
+        "((v[0]*v[9])*v[10])"
+      ]
+    ],
+    "final": "((-v[0])+v[11])"
+  },
+  "fp.investment_analysis.irr.after_tax_net_sale_cost.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "net_sale_proceeds_trace",
+        "(v[2]-v[3])"
+      ],
+      [
+        "taxable_gain_trace",
+        "((-v[0])+v[5])"
+      ],
+      [
+        "after_tax_proceeds_trace",
+        "(v[5]-((v[4]/100)*v[6]))"
+      ]
+    ],
+    "final": "((v[7]-v[0])*100/v[0])"
+  },
+  "fp.investment_analysis.irr.after_tax_sale.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "taxable_gain_trace",
+        "((-v[0])+v[2])"
+      ],
+      [
+        "gain_tax_trace",
+        "(v[3]*(v[4]/100))"
+      ],
+      [
+        "after_tax_proceeds_trace",
+        "(v[2]-v[5])"
+      ]
+    ],
+    "final": "((v[6]-v[0])*100/v[0])"
+  },
+  "fp.investment_analysis.irr.net_sale_proceeds.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "net_sale_proceeds_trace",
+        "(v[2]-v[3])"
+      ],
+      [
+        "gross_return_multiple_trace",
+        "(v[4]/v[0])"
+      ]
+    ],
+    "final": "((v[4]-v[0])*100/v[0])"
+  },
+  "fp.investment_analysis.npv.single_year_npv.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "present_value_trace",
+        "(v[1]/(1+v[2]/100))"
+      ],
+      [
+        "discount_factor_trace",
+        "(1+v[2]/100)"
+      ]
+    ],
+    "final": "((-v[0])+v[7])"
+  },
+  "fp.investment_analysis.npv.two_year_npv.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "pv_one_trace",
+        "(v[1]/(1+v[3]/100))"
+      ],
+      [
+        "pv_two_trace",
+        "(v[2]/((1+v[3]/100)**2))"
+      ],
+      [
+        "total_pv_trace",
+        "(v[11]+v[12])"
+      ]
+    ],
+    "final": "((-v[0])+v[13])"
+  },
+  "fp.investment_analysis.rar.jensen_alpha.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "market_premium_trace",
+        "((-v[1])+v[2])"
+      ],
+      [
+        "capm_return_trace",
+        "((v[3]*v[4])+v[1])"
+      ]
+    ],
+    "final": "(v[0]-v[5])"
+  },
+  "fp.investment_analysis.rar.m_squared_measure.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "excess_return_trace",
+        "(v[0]-v[2])"
+      ],
+      [
+        "sharpe_ratio_trace",
+        "(v[4]/v[1])"
+      ],
+      [
+        "scaled_premium_trace",
+        "(v[3]*v[5])"
+      ]
+    ],
+    "final": "(v[2]+v[6])"
+  },
+  "fp.investment_analysis.rar.sharpe_ratio.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "excess_return_trace",
+        "(v[0]-v[1])"
+      ]
+    ],
+    "final": "(v[3]/v[2])"
+  },
+  "fp.investment_analysis.roi.after_tax_roi.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "retention_rate_trace",
+        "(1-v[2]/100)"
+      ],
+      [
+        "after_tax_profit_trace",
+        "(v[1]*(1-v[2]/100))"
+      ]
+    ],
+    "final": "(v[7]*100/v[0])"
+  },
+  "fp.investment_analysis.roi.compound_growth_roi.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "growth_multiplier_trace",
+        "((1+v[1]/Fraction(100))**int(v[2]))"
+      ],
+      [
+        "ending_value_trace",
+        "(v[0]*v[6])"
+      ],
+      [
+        "investment_profit_trace",
+        "(v[0]*(((1+v[1]/Fraction(100))**int(v[2]))-1))"
+      ]
+    ],
+    "final": "((v[3]*100)*(((1+v[1]/Fraction(100))**int(v[2]))-1))"
+  },
+  "fp.investment_analysis.roi.conversion_campaign_roi.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "expected_clicks_trace",
+        "(v[0]*(v[1]/100))"
+      ],
+      [
+        "expected_sales_trace",
+        "(v[2]*(v[8]/100))"
+      ],
+      [
+        "campaign_revenue_trace",
+        "(v[3]*v[9])"
+      ]
+    ],
+    "final": "((v[10]-v[4])*100/v[4])"
+  },
+  "fp.investment_analysis.roi.property_roi.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "total_investment_trace",
+        "(v[0]+v[1])"
+      ],
+      [
+        "investment_profit_trace",
+        "(v[2]-v[4])"
+      ]
+    ],
+    "final": "((v[2]-v[4])*100/v[4])"
+  },
+  "fp.mergers_and_acquisitions.deal_structure.cash_payment_calculation.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[1]/100))"
+  },
+  "fp.mergers_and_acquisitions.deal_structure.stock_swap_calculation.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]/v[1])"
+  },
+  "fp.mergers_and_acquisitions.due_diligence.due_diligence_after_tax_interest_cost.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]*(v[1]/100))"
+      ],
+      [
+        "trace_2",
+        "(1-v[2]/100)"
+      ]
+    ],
+    "final": "((1-v[2]/100)*v[3])"
+  },
+  "fp.mergers_and_acquisitions.due_diligence.due_diligence_pe_valuation.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.mergers_and_acquisitions.due_diligence.due_diligence_synergy_estimation.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[2]*(v[4]/100))"
+      ]
+    ],
+    "final": "((-v[3])+v[5])"
+  },
+  "fp.mergers_and_acquisitions.due_diligence.due_diligence_working_capital.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]-v[1])"
+  },
+  "fp.mergers_and_acquisitions.post-merger_integration.integration_cost_reduction.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[2]*(v[4]/100))"
+      ]
+    ],
+    "final": "((-v[3])+v[5])"
+  },
+  "fp.mergers_and_acquisitions.post-merger_integration.integration_synergy_calculation.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ]
+    ],
+    "final": "(v[2]*(v[3]/100))"
+  },
+  "fp.mergers_and_acquisitions.post-merger_integration.revenue_synergy_net_gain.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[2]*(v[4]/100))"
+      ]
+    ],
+    "final": "(((v[2]/100)-(v[3]/100))*v[4])"
+  },
+  "fp.mergers_and_acquisitions.post-merger_integration.valuation_adjustment_after_integration.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ],
+      [
+        "trace_2",
+        "(1+v[2]/100)"
+      ]
+    ],
+    "final": "((1+v[2]/100)*v[3])"
+  },
+  "fp.mergers_and_acquisitions.synergies_and_cost_savings.synergy_basic_cost_reduction.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ]
+    ],
+    "final": "(v[2]*(v[3]/100))"
+  },
+  "fp.mergers_and_acquisitions.synergies_and_cost_savings.synergy_basic_fixed_savings.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]+v[1])"
+  },
+  "fp.mergers_and_acquisitions.synergies_and_cost_savings.synergy_complex_after_tax.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "((v[0]+v[1])*(v[2]/100))"
+      ],
+      [
+        "trace_2",
+        "(v[6]-(v[3]/v[4]))"
+      ]
+    ],
+    "final": "((1-v[5]/100)*v[7])"
+  },
+  "fp.mergers_and_acquisitions.synergies_and_cost_savings.synergy_complex_multi_category.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[2]*(v[4]/100))"
+      ]
+    ],
+    "final": "(v[3]+v[5])"
+  },
+  "fp.mergers_and_acquisitions.synergies_and_cost_savings.synergy_complex_net_savings.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]+v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[2]*(v[4]/100))"
+      ]
+    ],
+    "final": "((-v[3])+v[5])"
+  },
+  "fp.mergers_and_acquisitions.valuation_methods.comp_ebitda_multiple_with_net_debt.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]*v[1])"
+      ],
+      [
+        "trace_2",
+        "(v[2]-v[3])"
+      ]
+    ],
+    "final": "(v[4]-v[5])"
+  },
+  "fp.mergers_and_acquisitions.valuation_methods.comparable_revenue_valuation.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]*v[1])"
+      ]
+    ],
+    "final": "((-v[2])+v[3])"
+  },
+  "fp.mergers_and_acquisitions.valuation_methods.ebitda_multiple_valuation.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "trace_1",
+        "(v[0]*v[1])"
+      ]
+    ],
+    "final": "((-v[2])+v[3])"
+  },
+  "fp.personal_finance.budgeting.cost_reallocation.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "net_added_cost_usd",
+        "(v[1]-v[2])"
+      ]
+    ],
+    "final": "(v[0]+v[3])"
+  },
+  "fp.personal_finance.budgeting.cut_reforecast.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "cut_amount_usd",
+        "(v[0]*v[1])"
+      ]
+    ],
+    "final": "((1*v[0])+(1*v[2])+(-1*v[3]))"
+  },
+  "fp.personal_finance.budgeting.project_adjustment.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "contingency_usd",
+        "(v[1]*v[2])"
+      ],
+      [
+        "project_requirement_usd",
+        "(v[1]*(1+v[2]))"
+      ]
+    ],
+    "final": "(v[0]+v[4])"
+  },
+  "fp.personal_finance.budgeting.simple_allocation.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.personal_finance.loanrepay.extra_payment_total.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "combined_monthly_payment",
+        "(v[0]+v[1])"
+      ]
+    ],
+    "final": "(v[2]*v[3])"
+  },
+  "fp.personal_finance.loanrepay.monthly_installment.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]/v[1])"
+  },
+  "fp.personal_finance.loanrepay.refinance_benefit.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "gross_interest_savings_usd",
+        "(v[0]-v[1])"
+      ]
+    ],
+    "final": "((-v[2])+v[3])"
+  },
+  "fp.personal_finance.loanrepay.simple_repayment.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]+v[1])"
+  },
+  "fp.personal_finance.personalinvest.portfolio_allocation.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "remaining_amount_usd",
+        "(v[0]*(1-v[1]))"
+      ]
+    ],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.personal_finance.personalinvest.volatility_band.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "band_spread_usd",
+        "(v[0]*v[1])"
+      ],
+      [
+        "lower_bound_usd",
+        "(v[0]*(1-v[1]))"
+      ]
+    ],
+    "final": "(v[0]*(1+v[1]))"
+  },
+  "fp.personal_finance.personalinvest.withdrawal_balance.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "withdrawal_fee_usd",
+        "(v[1]*v[2])"
+      ],
+      [
+        "total_outflow_usd",
+        "(v[1]*(1+v[2]))"
+      ]
+    ],
+    "final": "(v[0]-v[4])"
+  },
+  "fp.personal_finance.saveretire.one_period_growth.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "pre_return_balance_usd",
+        "(v[0]+v[1])"
+      ],
+      [
+        "return_amount_usd",
+        "(v[2]*v[3])"
+      ]
+    ],
+    "final": "((1+v[2])*v[3])"
+  },
+  "fp.personal_finance.saveretire.years_to_target.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "funding_gap_usd",
+        "max(Fraction(0),v[0]-v[1])"
+      ]
+    ],
+    "final": "(v[3]/v[2])"
+  },
+  "fp.personal_finance.taxcalc.capital_gains.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "taxable_gain_usd",
+        "max(Fraction(0),v[0]-v[1])"
+      ]
+    ],
+    "final": "(v[2]*v[3])"
+  },
+  "fp.personal_finance.taxcalc.flat_tax.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.personal_finance.taxcalc.itemized_deduction.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "chosen_deduction_usd",
+        "max(v[1],v[2])"
+      ],
+      [
+        "taxable_income_usd",
+        "max(Fraction(0),v[0]-v[4])"
+      ]
+    ],
+    "final": "(v[3]*v[5])"
+  },
+  "fp.personal_finance.taxcalc.standard_deduction.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "taxable_income_usd",
+        "max(Fraction(0),v[0]-v[1])"
+      ]
+    ],
+    "final": "(v[2]*v[3])"
+  },
+  "fp.risk_management.regulatory_compliance.capital_requirement.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "raw_deficiency_trace",
+        "((-v[0])+v[1])"
+      ]
+    ],
+    "final": "max(Fraction(0),(-v[0])-(-v[1]))"
+  },
+  "fp.risk_management.regulatory_compliance.capital_shortfall.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "raw_shortfall_trace",
+        "((-v[0])+v[1])"
+      ]
+    ],
+    "final": "max(Fraction(0),(-v[0])-(-v[1]))"
+  },
+  "fp.risk_management.regulatory_compliance.compliance_penalty.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "raw_excess_trace",
+        "(v[0]-v[1])"
+      ],
+      [
+        "excess_trace",
+        "max(Fraction(0),v[0]-v[1])"
+      ]
+    ],
+    "final": "(v[2]*(v[7]/100))"
+  },
+  "fp.risk_management.regulatory_compliance.liquidity_gap.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "raw_gap_trace",
+        "((-v[0])+v[1])"
+      ]
+    ],
+    "final": "max(Fraction(0),(-v[0])-(-v[1]))"
+  },
+  "fp.risk_management.risk_appetite.capital_allocation_risk_appetite.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "appetite_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[1]/100))"
+  },
+  "fp.risk_management.risk_appetite.multi_factor_risk_appetite_assessment.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "appetite_ratio_trace",
+        "(v[1]/100)"
+      ],
+      [
+        "adjustment_trace",
+        "(1+v[2]/100)"
+      ]
+    ],
+    "final": "((v[0]*v[1])*(v[8]/100))"
+  },
+  "fp.risk_management.risk_appetite.risk_adjusted_return.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "factor_ratio_trace",
+        "(v[1]/100)"
+      ],
+      [
+        "premium_ratio_trace",
+        "(v[2]/100)"
+      ]
+    ],
+    "final": "((v[0]*v[1])*(v[7]/100))"
+  },
+  "fp.risk_management.risk_appetite.risk_exposure_limit.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "appetite_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[1]/100))"
+  },
+  "fp.risk_management.risk_appetite.risk_threshold_measurement.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "appetite_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[1]/100))"
+  },
+  "fp.risk_management.risk_metrics.liquidity_risk.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "spread_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[1]/100))"
+  },
+  "fp.risk_management.risk_metrics.portfolio_var.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "volatility_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "((v[0]*v[1])*(v[2]/100))"
+  },
+  "fp.risk_management.risk_metrics.stock_sensitivity.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "drop_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[1]/100))"
+  },
+  "fp.risk_management.risk_metrics.volatility_sensitivity.intermediate.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.risk_management.scenario_planning.interest_rate_impact.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "rate_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "((v[0]*v[1])*(v[2]/100))"
+  },
+  "fp.risk_management.scenario_planning.market_downturn_revenue.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "remaining_ratio_trace",
+        "(1-v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(1-v[1]/100))"
+  },
+  "fp.risk_management.scenario_planning.operating_cost_increase.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "growth_multiple_trace",
+        "(1+v[1]/100)"
+      ]
+    ],
+    "final": "(v[0]*(1+v[1]/100))"
+  },
+  "fp.risk_management.scenario_planning.revenue_recovery_effect.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "remaining_ratio_trace",
+        "(1-v[1]/100)"
+      ],
+      [
+        "recovery_multiple_trace",
+        "(1+v[2]/100)"
+      ]
+    ],
+    "final": "((v[0]*(1-v[1]/100))*(1+v[2]/100))"
+  },
+  "fp.risk_management.sensitivity_analysis.portfolio_single_factor.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "factor_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "((v[0]*v[1])*(v[2]/100))"
+  },
+  "fp.risk_management.sensitivity_analysis.stock_sensitivity.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "market_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "((v[0]*v[1])*(v[2]/100))"
+  },
+  "fp.risk_management.sensitivity_analysis.volatility_sensitivity.intermediate.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.risk_management.stress_testing.multi_factor_portfolio.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "credit_impact_trace",
+        "((v[0]*v[1])*(v[3]/100))"
+      ],
+      [
+        "market_impact_trace",
+        "((v[0]*v[2])*(v[4]/100))"
+      ]
+    ],
+    "final": "(v[8]+v[9])"
+  },
+  "fp.risk_management.stress_testing.portfolio_single_factor.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "factor_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "((v[0]*v[1])*(v[2]/100))"
+  },
+  "fp.risk_management.stress_testing.sensitivity_of_stock.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "shock_ratio_trace",
+        "(v[1]/100)"
+      ]
+    ],
+    "final": "((v[0]*v[1])*(v[2]/100))"
+  },
+  "fp.risk_management.stress_testing.volatility_sensitivity.intermediate.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[1])"
+  },
+  "fp.risk_management.var.stock_return.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "loss_ratio_trace",
+        "(v[1]/100)"
+      ],
+      [
+        "base_loss_trace",
+        "(v[0]*(v[1]/100))"
+      ]
+    ],
+    "final": "(v[2]*v[12])"
+  },
+  "fp.risk_management.var.time_horizon.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "volatility_ratio_trace",
+        "(v[1]/100)"
+      ],
+      [
+        "scaled_volatility_trace",
+        "((v[1]*v[2])*(v[3]/100))"
+      ]
+    ],
+    "final": "(v[0]*v[15])"
+  },
+  "fp.sustainable_finance.carbon_credits.credit_purchase.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]/v[3])"
+  },
+  "fp.sustainable_finance.carbon_credits.offset_cost_savings.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "gross_cost_trace",
+        "(v[0]*v[4])"
+      ],
+      [
+        "discount_amount_trace",
+        "(v[7]*(v[11]/100))"
+      ]
+    ],
+    "final": "((1-v[7]/100)*v[11])"
+  },
+  "fp.sustainable_finance.esg_investing.dual_savings.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "annual_energy_savings_trace",
+        "(v[0]*12)"
+      ],
+      [
+        "annual_water_savings_trace",
+        "(v[3]*12)"
+      ],
+      [
+        "after_maintenance_trace",
+        "(v[14]-(v[6]-v[13]))"
+      ]
+    ],
+    "final": "(v[9]+v[15])"
+  },
+  "fp.sustainable_finance.esg_investing.green_bond_yield.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "annual_interest_trace",
+        "(v[0]*(v[3]/100))"
+      ]
+    ],
+    "final": "(v[6]*v[9])"
+  },
+  "fp.sustainable_finance.esg_investing.simple_cost_savings.basic.v1": {
+    "var_indices": null,
+    "steps": [],
+    "final": "(v[0]*v[3])"
+  },
+  "fp.sustainable_finance.green_bonds.compound_yield.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "compound_factor_trace",
+        "((1+v[3]/Fraction(100))**int(v[6]))"
+      ],
+      [
+        "future_value_trace",
+        "(v[0]*v[10])"
+      ]
+    ],
+    "final": "(v[0]*(((1+v[3]/Fraction(100))**int(v[6]))-1))"
+  },
+  "fp.sustainable_finance.green_bonds.financing_cost_reduction.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "original_interest_trace",
+        "(v[0]*(((1+v[3]/Fraction(100))**int(v[6]))-1))"
+      ],
+      [
+        "adjusted_rate_trace",
+        "(v[3]-v[9])"
+      ],
+      [
+        "adjusted_interest_trace",
+        "(v[0]*(((1+v[13]/Fraction(100))**int(v[6]))-1))"
+      ]
+    ],
+    "final": "(v[12]-v[14])"
+  },
+  "fp.sustainable_finance.green_bonds.synergy_benefit.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "interest_earned_trace",
+        "(v[0]*(((1+v[3]/Fraction(100))**int(v[6]))-1))"
+      ],
+      [
+        "annual_bonus_trace",
+        "((v[12]/100)/(v[8]/v[9]))"
+      ],
+      [
+        "total_bonus_trace",
+        "(v[6]*v[18])"
+      ]
+    ],
+    "final": "(v[17]+v[19])"
+  },
+  "fp.sustainable_finance.green_bonds.tax_incentive.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "interest_earned_trace",
+        "(v[0]*(((1+v[3]/Fraction(100))**int(v[6]))-1))"
+      ],
+      [
+        "tax_credit_trace",
+        "(v[9]*(v[12]/100))"
+      ]
+    ],
+    "final": "((1+v[9]/100)*v[12])"
+  },
+  "fp.sustainable_finance.social_impact_investing.combined_cost_tax_savings.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "operating_savings_trace",
+        "(v[0]*(v[3]/100))"
+      ],
+      [
+        "tax_credit_trace",
+        "(v[6]*(v[9]/100))"
+      ]
+    ],
+    "final": "(v[12]+v[13])"
+  },
+  "fp.sustainable_finance.social_impact_investing.energy_efficiency_savings.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "saving_ratio_trace",
+        "(v[3]/100)"
+      ]
+    ],
+    "final": "(v[0]*(1-v[3]/100))"
+  },
+  "fp.sustainable_finance.social_impact_investing.financing_cost_reduction.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "reduction_percentage_points_trace",
+        "(v[3]/100)"
+      ]
+    ],
+    "final": "(v[0]-(v[3]/100))"
+  },
+  "fp.sustainable_finance.social_impact_investing.multiphase_investment.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "phase1_savings_trace",
+        "(v[1]*(v[4]/100))"
+      ],
+      [
+        "phase2_savings_trace",
+        "(v[8]*v[11])"
+      ],
+      [
+        "phase3_subsidy_trace",
+        "(v[15]*(v[18]/100))"
+      ]
+    ],
+    "final": "((v[24]+v[25])+v[26])"
+  },
+  "fp.sustainable_finance.social_impact_investing.supply_chain_integration.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "percentage_saving_trace",
+        "(v[0]*(v[3]/100))"
+      ],
+      [
+        "total_saving_per_unit_trace",
+        "(v[6]+v[12])"
+      ]
+    ],
+    "final": "(v[9]*v[13])"
+  },
+  "fp.sustainable_finance.sustainability_reporting.dual_operational_savings.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "energy_savings_trace",
+        "(v[0]*(v[3]/100))"
+      ],
+      [
+        "waste_savings_trace",
+        "(v[6]*(v[9]/100))"
+      ]
+    ],
+    "final": "(v[12]+v[13])"
+  },
+  "fp.sustainable_finance.sustainability_reporting.energy_cost_savings.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "reduction_ratio_trace",
+        "(v[3]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[3]/100))"
+  },
+  "fp.sustainable_finance.sustainability_reporting.supply_chain_savings.intermediate.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "remaining_cost_trace",
+        "(v[0]-v[3])"
+      ],
+      [
+        "additional_saving_trace",
+        "(v[6]*(v[9]/100))"
+      ]
+    ],
+    "final": "(v[3]+v[10])"
+  },
+  "fp.sustainable_finance.sustainability_reporting.sustainability_roi_analysis.advanced.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "base_annual_savings_trace",
+        "(v[3]+v[6])"
+      ],
+      [
+        "total_annual_savings_trace",
+        "(((v[9]/100)+(1+v[12]/100))*v[19])"
+      ],
+      [
+        "net_period_benefit_trace",
+        "((v[15]*v[20])-v[0])"
+      ]
+    ],
+    "final": "(v[21]*100/v[0])"
+  },
+  "fp.sustainable_finance.sustainability_reporting.waste_management_savings.basic.v1": {
+    "var_indices": null,
+    "steps": [
+      [
+        "reduction_ratio_trace",
+        "(v[3]/100)"
+      ]
+    ],
+    "final": "(v[0]*(v[3]/100))"
+  }
+}
